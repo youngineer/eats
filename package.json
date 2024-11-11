@@ -1,0 +1,16 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "My food ordering app project",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "food",
+    "ordering",
+    "app"
+  ],
+  "author": "Kartik",
+  "license": "ISC"
+}

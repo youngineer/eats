@@ -2,8 +2,10 @@
   "name": "food-ordering-app",
   "version": "1.0.0",
   "description": "My food ordering app project",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -12,5 +14,13 @@
     "app"
   ],
   "author": "Kartik",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }

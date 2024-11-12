@@ -1,0 +1,130 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+}
+
+.header .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.header .nav-items ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header .nav-items ul li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header .nav-items ul li:hover {
+  color: #ffd700;
+}
+
+/* Body */
+.body {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.body .search {
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+}
+
+/* Filter Button */
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #e55335;
+}
+
+/* Restaurant Container */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Restaurant Card */
+.res-card {
+  width: 220px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.res-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.res-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.res-card h4 {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+}

@@ -1,5 +1,6 @@
 import {LOGO_URL} from "../../utils/Constants";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
     const [isLogged, setIsLogged] = useState("false");
@@ -17,14 +18,14 @@ export const Header = () => {
     return(
         <div className="header">
             <div className="logo">
-                <img src= {LOGO_URL}/>
+                <Link to={"/"}><img src= {LOGO_URL}/></Link>
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
+                    <Link to={"/"} className="login-btn">Home</Link>
+                    <Link to={"/about"} className="login-btn">About</Link>
+                    <Link to={"/contact"} className="login-btn">Contact Us</Link>
+                    <Link to={"/cart"} className="login-btn">Cart</Link>
                     <button className="login-btn" onClick={toggleBtnName}>
                         {btnName}
                     </button>

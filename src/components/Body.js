@@ -3,6 +3,7 @@ import { RESTAURANT_LIST } from "../../utils/Constants";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../utils/Constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 import { RES_OBJ } from "../../utils/mockData";
   
 export const Body = () => {
@@ -40,7 +41,8 @@ export const Body = () => {
 
         // console.log(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         setRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    }
+    };
+    
 
     if (restaurants.length == 0){
         <Shimmer />;
@@ -71,14 +73,18 @@ export const Body = () => {
 
             <div className="res-container">
                 {restaurants.map((restaurant) => (
-                    <RestaurantCard
-                        key={restaurant?.info?.id}
-                        image={restaurant?.info?.cloudinaryImageId || "No Image"}
-                        name={restaurant?.info?.name || "Unknown"}
-                        cuisine={restaurant?.info?.cuisines?.join(", ") || "Cuisine not specified"}
-                        avgRatingString={restaurant?.info?.avgRating || "No rating"}
-                        sla={restaurant?.info?.sla || { deliveryTime: "Unknown" }} 
-                    />
+                    <Link 
+                        key={restaurant?.info?.id} // Key should always be at the parent node
+                        to={"/restaurant/" + restaurant?.info?.id}> 
+                        {console.log(restaurant?.info?.id)}
+                        <RestaurantCard
+                            image={restaurant?.info?.cloudinaryImageId || "No Image"}
+                            name={restaurant?.info?.name || "Unknown"}
+                            cuisine={restaurant?.info?.cuisines?.join(", ") || "Cuisine not specified"}
+                            avgRatingString={restaurant?.info?.avgRating || "No rating"}
+                            sla={restaurant?.info?.sla || { deliveryTime: "Unknown" }} 
+                        />
+                    </Link>
                 ))}
             </div>
         </div>

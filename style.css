@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 75;
 }
 
 body {
@@ -219,6 +225,7 @@ body {
 /* Restaurant Card */
 .res-card {
   width: 220px;
+  text-decoration: none;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
@@ -280,4 +287,217 @@ body {
 @keyframes shimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
+}
+
+/* Menu Container */
+.menu-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Restaurant Info Section */
+.restaurant-info {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+}
+
+.restaurant-name {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.restaurant-cuisines,
+.restaurant-cost {
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
+  margin: 4px 0;
+}
+
+/* Menu Section */
+/* Menu Container */
+.menu-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Restaurant Info Section */
+.restaurant-info {
+  padding: 20px 0 24px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.restaurant-name {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.restaurant-cuisines,
+.restaurant-cost {
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
+  margin: 4px 0;
+}
+
+/* Main Menu Container */
+.menu-container {
+  padding: 16px;
+}
+
+.restaurant-info {
+  margin-bottom: 24px;
+}
+
+.menu-content {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.menu-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.menu-categories {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-category {
+  margin-bottom: 24px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  gap: 16px;
+}
+
+.item-details {
+  flex: 1;
+  padding-right: 16px;
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.item-type {
+  font-size: 16px;
+}
+
+.item-badge {
+  color: #e54634;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.item-name {
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.item-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.item-price-rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #e54634;
+  margin-right: 16px;
+}
+
+.item-rating {
+  color: #3d9a50;
+}
+
+.item-actions {
+  text-align: center;
+  min-width: 120px;
+}
+
+.item-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.add-button {
+  background-color: #00a884;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-button:hover {
+  background-color: #008970;
+}
+
+.customisable-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .item-actions {
+      text-align: left;
+  }
 }

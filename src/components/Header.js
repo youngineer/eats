@@ -1,38 +1,56 @@
-import {LOGO_URL} from "../../utils/Constants";
+import { LOGO_URL } from "../../utils/Constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 export const Header = () => {
-    const [isLogged, setIsLogged] = useState("false");
-    const [btnName, setBtnName] = useState("Login");
+  const [isLogged, setIsLogged] = useState(false);
+  const [btnName, setBtnName] = useState("Login");
+  const isOnline = useOnlineStatus();
 
-    const toggleBtnName = () => {
-        if (isLogged){
-            setBtnName("Logout");
-        } else {
-            setBtnName("Login");
-        }
-        setIsLogged(!isLogged);
-    };
+  const toggleBtnName = () => {
+    setBtnName(isLogged ? "Login" : "Logout");
+    setIsLogged(!isLogged);
+  };
 
-    return(
-        <div className="header">
-            <div className="logo">
-                <Link to={"/"}><img src= {LOGO_URL}/></Link>
+  return (
+    <div className="top-0 left-0 right-0 bg-orange-600  shadow-sm z-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center text-slate-50 justify-between h-16">
+          <Link to="/" className="flex items-center">
+            <img src={LOGO_URL} alt="Logo" className="h-8 w-auto" />
+          </Link>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-center  text-sm">
+              <span>{isOnline ? "🟢 Online" : "🔴 Offline"}</span>
             </div>
-            <div className="nav-items">
-                <ul>
-                    <Link to={"/"} className="login-btn">Home</Link>
-                    <Link to={"/about"} className="login-btn">About</Link>
-                    <Link to={"/contact"} className="login-btn">Contact Us</Link>
-                    <Link to={"/cart"} className="login-btn">Cart</Link>
-                    <button className="login-btn" onClick={toggleBtnName}>
-                        {btnName}
-                    </button>
-                </ul>
-            </div>
+            <Link to="/" className="link link-underline link-underline-white text-white">
+              Home
+            </Link>
+            <Link to="/about" className=" hover:text-orange-500 text-sm font-medium">
+              About
+            </Link>
+            <Link to="/contact" className=" hover:text-orange-500 text-sm font-medium">
+              Contact
+            </Link>
+            <Link to="/cart" className="flex items-center space-x-1 hover:text-orange-500 text-sm font-medium">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+              <span>Cart</span>
+            </Link>
+            <button
+              onClick={toggleBtnName}
+              className="text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+            >
+              {btnName}
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Header;

@@ -8,12 +8,13 @@ const RestaurantCard = (props) => {
   // console.log(props.name);
 
   return (
-    <div className="res-card">
-      <img alt="res-logo" src={imageUrl} />
-      <h3>{props.name}</h3>
-      <h4>{props.cuisine}</h4>
-      <h4>Rating: {props.avgRatingString}</h4>
-      <h4>ETA: {props.sla?.deliveryTime} min</h4>
+    <div className="p-4 border-spacing-4 bg-black text-center">
+      <img alt="res-logo" src={imageUrl} className="h
+      w-60 h-40 rounded-lg"/>
+      <h3 className="text-xl font-bold">{props.name}</h3>
+      <h4 className="text-gray-700 font-semibold">{props.cuisine}</h4>
+      <h4 className="text-gray-700 font-semibold">Rating: {props.avgRatingString}</h4>
+      <h4 className="text-gray-700 font-semibold">ETA: {props.sla?.deliveryTime} min</h4>
     </div>
   );
 };

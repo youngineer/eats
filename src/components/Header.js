@@ -14,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="top-0 left-0 right-0 bg-orange-600  shadow-sm z-50">
+    <div className="top-0 left-0 right-0 bg-orange-600  shadow-sm z-50 font-serif">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center text-slate-50 justify-between h-16">
           <Link to="/" className="flex items-center">

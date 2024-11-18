@@ -8,9 +8,8 @@ const RestaurantCard = (props) => {
   // console.log(props.name);
 
   return (
-    <div className="p-4 border-spacing-4 bg-black text-center">
-      <img alt="res-logo" src={imageUrl} className="h
-      w-60 h-40 rounded-lg"/>
+    <div className="text-center m-4">
+      <img alt="res-logo" src={imageUrl} className="mx-auto w-60 h-40 rounded-lg "/>
       <h3 className="text-xl font-bold">{props.name}</h3>
       <h4 className="text-gray-700 font-semibold">{props.cuisine}</h4>
       <h4 className="text-gray-700 font-semibold">Rating: {props.avgRatingString}</h4>

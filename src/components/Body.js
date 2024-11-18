@@ -78,7 +78,7 @@ export const Body = () => {
         </div>
   
         <button 
-          className="w-full sm:w-auto bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors text-lg"
+          className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors text-lg"
           onClick={toggleFilter}
         >
           {filterButtonDisplay}
@@ -89,12 +89,12 @@ export const Body = () => {
       {restaurants.length === 0 ? (
         <Shimmer />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8 justify-center ">
           {restaurants.map((restaurant) => (
             <Link
               key={restaurant?.info?.id}
               to={"/restaurant/" + restaurant?.info?.id}
-              className="block hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden transform hover:scale-105"
+              className="bg-slate-50 block hover:transition-shadow duration-300 rounded-lg overflow-hidden transform hover:scale-105 hover:bg-slate-200"
             >
               <RestaurantCard
                 image={restaurant?.info?.cloudinaryImageId || "No Image"}

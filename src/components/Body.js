@@ -56,7 +56,6 @@ export const Body = () => {
 
   return (
     <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Search and Filter Section */}
       <div className="my-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex w-full sm:w-auto gap-2">
           <input
@@ -85,7 +84,6 @@ export const Body = () => {
         </button>
       </div>
   
-      {/* Restaurant Grid */}
       {restaurants.length === 0 ? (
         <Shimmer />
       ) : (

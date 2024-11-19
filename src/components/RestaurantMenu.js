@@ -24,7 +24,7 @@ const RestaurantMenu = () => {
   } = restaurantInfo;
 
   return (
-    <div className="flex flex-col mx-auto">
+    <div className="flex flex-col mx-auto p-8">
       <div className="p-4 text-center">
         <h1 className="text-2xl font-bold mb-2">{name}</h1>
         <div className="flex items-center justify-center gap-1 mb-2">

@@ -24,7 +24,7 @@ const RestaurantMenuMainCategory = ({ menuList }) => {
 
         return (
           <div key={index} className="mb-8 border-solid rounded-lg">
-            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 w-1/4mx-auto"></hr>
+            
             <div
               className="cursor-pointer flex justify-between items-center"
               onClick={() => toggleMainCategory(index)}
@@ -56,7 +56,9 @@ const RestaurantMenuMainCategory = ({ menuList }) => {
                 <RestaurantMenuSubCategory categories={categories} />
                 
               </div>
+              
             </div>
+            <hr className="h-1 my-8 bg-gray-200 border-0 dark:bg-gray-700 w-1/4mx-auto"></hr>
           </div>
         );
       })}

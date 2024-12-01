@@ -35,24 +35,6 @@ Eats is a modern, feature-rich food ordering web application built using React, 
   - Jest
   - Babel for test configuration
 
-## 🏗️ Project Structure
-
-```
-eats/
-├── src/
-│   ├── components/
-│   │   ├── Header/
-│   │   ├── Body/
-│   │   ├── RestaurantCard/
-│   │   └── Footer/
-│   ├── utils/
-│   ├── redux/
-│   │   └── slices/
-│   └── __tests__/
-├── public/
-└── config files
-```
-
 ### Key Components
 - **Header**: Logo, Navigation
 - **Body**: Search functionality, Restaurant listings
@@ -115,8 +97,8 @@ eats/
 - Responsive design improvements
 
 ## 📫 Connect with Me
-- GitHub: [Your GitHub Profile](https://github.com/youngineer)
-- LinkedIn: [[Your LinkedIn Profile]](https://www.linkedin.com/in/kartikyes/)
+- GitHub: [My GitHub](https://github.com/youngineer)
+- LinkedIn: [[My LinkedIn]](https://www.linkedin.com/in/kartikyes/)
 
 ## 📄 License
 This project is open-source and available under the MIT License.

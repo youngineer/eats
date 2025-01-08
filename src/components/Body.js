@@ -46,13 +46,32 @@ export const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const apiData = await fetch(API_URL);
-    const jsonData = await apiData.json();
-    setRestaurants(
-      jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
+    try {
+      const apiData = await fetch(API_URL, {
+        method: 'GET', 
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*', 
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        },
+        credentials: 'include', 
+      });
+  
+      if (!apiData.ok) {
+        throw new Error(`HTTP error! status: ${apiData.status}`);
+      }
+  
+      const jsonData = await apiData.json();
+      setRestaurants(
+        jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
+  
 
   return (
     <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
